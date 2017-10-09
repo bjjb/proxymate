@@ -5,10 +5,7 @@ coffee = require 'gulp-coffee'
 
 task = (f, src, dest) -> -> gulp.src(src).pipe(f()).pipe(gulp.dest(dest))
 
-gulp.task 'proxymate.js', task(coffee, 'proxymate.coffee', './')
-gulp.task 'server.js', task(coffee, 'server.coffee', './')
-gulp.task 'index.js', task(coffee, 'index.coffee', './')
-gulp.task 'module', ['proxymate.js', 'server.js', 'index.js']
+gulp.task 'module', task(coffee, '!(gulpfile).coffee', './')
 
 gulp.task 'app/html', task(pug, 'app/*.pug', 'app/')
 gulp.task 'app/css', task(stylus, 'app/*.styl', 'app/')

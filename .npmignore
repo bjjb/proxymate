@@ -3,4 +3,5 @@ app/*.coffee
 app/*.styl
 app/*.pug
 docs/
+test/
 Makefile
