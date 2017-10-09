@@ -1,0 +1,4 @@
+*.coffee
+app/*.coffee
+app/*.styl
+app/*.pug
