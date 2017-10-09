@@ -1,2 +1,1 @@
-{ Proxymate } = require './proxymate'
-module.exports = Proxymate
+module.exports = require './lib'

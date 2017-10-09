@@ -4,12 +4,13 @@
   "description": "A proxy server in JavaScript",
   "main": "index.js",
   "scripts": {
+    "start": "./proxymate server",
     "test": "mocha test/**/*.coffee",
     "build": "gulp",
     "prepare": "gulp"
   },
   "bin": {
-    "proxymate": "./server.js"
+    "proxymate": "bin/proxymate"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,9 @@
     "mocha": "^4.0.1"
   },
   "dependencies": {
+    "commander": "^2.11.0",
     "express": "^4.16.1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "redis": "^2.8.0"
   }
 }

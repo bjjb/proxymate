@@ -5,7 +5,8 @@ coffee = require 'gulp-coffee'
 
 task = (f, src, dest) -> -> gulp.src(src).pipe(f()).pipe(gulp.dest(dest))
 
-gulp.task 'module', task(coffee, '!(gulpfile).coffee', './')
+gulp.task 'lib', task(coffee, 'lib/*.coffee', 'lib/')
+gulp.task 'index.js', task(coffee, 'index.coffee', './')
 
 gulp.task 'app/html', task(pug, 'app/*.pug', 'app/')
 gulp.task 'app/css', task(stylus, 'app/*.styl', 'app/')
@@ -17,4 +18,4 @@ gulp.task 'docs/css', task(stylus, 'docs/*.styl', 'docs/')
 gulp.task 'docs/js', task(coffee, 'docs/*.coffee', 'docs/')
 gulp.task 'docs', ['docs/html', 'docs/css', 'docs/js']
 
-gulp.task 'default', ['module', 'app', 'docs']
+gulp.task 'default', ['lib', 'app', 'docs', 'index.js']
