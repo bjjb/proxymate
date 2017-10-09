@@ -4,4 +4,4 @@ default:
 	npm run build
 
 clean:
-	rm -fv *.js app/*.{js,css,html}
+	rm -fv *.js docs/*.{js,css,html} app/*.{js,css,html}

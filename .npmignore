@@ -2,3 +2,5 @@
 app/*.coffee
 app/*.styl
 app/*.pug
+docs/
+Makefile
