@@ -1,5 +1,5 @@
-FROM node:alpine
-WORKDIR /app
-ADD ./ ./
-RUN npm install
-CMD ./bin/proxymate server
+FROM scratch
+COPY main proxymate
+ADD app/ www
+ENTRYPOINT ["/proxymate"]
+EXPOSE 8899
